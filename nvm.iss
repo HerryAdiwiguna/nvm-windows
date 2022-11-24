@@ -13,7 +13,12 @@
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-PrivilegesRequired=admin
+<<<<<<< Updated upstream
+
+; TODO Determine how to stop InnoSetup throwing an error here 
+; See https://stackoverflow.com/a/44575671/102699
+PrivilegesRequired=admin 
+
 ; SignTool=MsSign $f
 ; SignedUninstaller=yes
 AppId={#MyAppId}
@@ -24,6 +29,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
+AppCopyright=Copyright (C) 2018-2021 Ecor Ventures LLC, Corey Butler, and contributors.
 DefaultDirName={userappdata}\{#MyAppShortName}
 DisableDirPage=no
 DefaultGroupName={#MyAppName}
@@ -38,7 +44,8 @@ ChangesEnvironment=yes
 DisableProgramGroupPage=yes
 ArchitecturesInstallIn64BitMode=x64 ia64
 UninstallDisplayIcon={app}\{#MyIcon}
-AppCopyright=Copyright (C) 2018-2021 Ecor Ventures LLC, Corey Butler, and contributors.
+VersionInfoTextVersion={%AppVerName}
+VersionInfoProductTextVersion={%VersionInfoProductTextVersion}
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
